@@ -15,7 +15,7 @@
 ---
 
 ## 🧱 项目结构说明
-
+```
 gpt2-train-deploy-demo/
 ├── app.py					# Flask 主服务程序（入口）
 ├── Dockerfile				# Docker 镜像构建文件
@@ -44,7 +44,7 @@ gpt2-train-deploy-demo/
 ├── transformers1_training_3.py     # GPT-2 训练脚本 v3（多轮实验）
 ├── transformers2_InferenceOptimization.py  # 推理优化配置
 └── transformers3_DeploymentFlask.py        # 部署服务整合（和 app.py 一样，app.py是为了在docker中运行）
-
+```
 ---
 
 ## 🖼️ 效果截图
