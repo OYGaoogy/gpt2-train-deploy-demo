@@ -90,25 +90,45 @@ ngrok http 5000
 
 ## 常用命令
 镜像启动方式：
+
 先打开PC的 docker desktop APP
+
 docker run --gpus all -p 5000:5000 gpt2-flask-gpu
+
 再开个终端运行下面的
+
 ngrok http 5000
 
+---
+
 docker 常用命令：
+
 docker image ls
+
 docker image rm xxxxxx
+
 docker ps -a
+
 docker stop  gpt2-flask-gpu
+
 docker container rm -f xxxxxxx
 
 构建和运行镜像：
-在项目根目录下构建镜像执行：docker build -t gpt2-flask-gpu .
-启动带 GPU 的容器：docker run --gpus all -p 5000:5000 gpt2-flask-gpu
+
+在项目根目录下构建镜像执行：
+docker build -t gpt2-flask-gpu .
+
+启动带 GPU 的容器：
+docker run --gpus all -p 5000:5000 gpt2-flask-gpu
 
 构建镜像时由于网络原因容易出错就先下载下来一些基础镜像：
-下载：docker pull pytorch/pytorch:2.1.0-cuda11.8-cudnn8-runtime
-导出：docker save -o pytorch-2.1.0.tar pytorch/pytorch:2.1.0-cuda11.8-cudnn8-runtime
-导入：docker load -i pytorch-2.1.0.tar
+下载：
+docker pull pytorch/pytorch:2.1.0-cuda11.8-cudnn8-runtime
+
+导出：
+docker save -o pytorch-2.1.0.tar pytorch/pytorch:2.1.0-cuda11.8-cudnn8-runtime
+
+导入：
+docker load -i pytorch-2.1.0.tar
 
 
